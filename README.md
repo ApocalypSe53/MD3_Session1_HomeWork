@@ -18,6 +18,7 @@ sequenceDiagram
     Database-->>Service: Trả về List<Product>
     Service-->>Controller: Trả về List<Product>
     Controller-->>Client: HTTP Response (Status 200 OK + JSON)
+```
 2. Phân tích chi tiết quy trình Request - Response
 Để đáp ứng tính năng "Xem danh sách sản phẩm", hệ thống phân lớp sẽ hoạt động và phối hợp với nhau theo các bước sau:
 
