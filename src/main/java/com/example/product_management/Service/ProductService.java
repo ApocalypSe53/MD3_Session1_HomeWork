@@ -21,4 +21,24 @@ public class ProductService {
         return products;
     }
 
+    public Product addProduct(Product product) {
+        products.add(product);
+        return product;
+    }
+
+    public Product updateProduct(Long id, Product updatedProduct) {
+        for (Product product : products) {
+            if (product.getId().equals(id)) {
+                product.setName(updatedProduct.getName());
+                product.setPrice(updatedProduct.getPrice());
+                return product;
+            }
+        }
+        return null;
+    }
+
+    public boolean deleteProduct(Long id) {
+        return products.removeIf(product -> product.getId().equals(id));
+    }
+
 }
